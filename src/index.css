@@ -1,0 +1,190 @@
+/*-----------------------------------------------------------------*/
+/*                      GLOBAL STYLES                              */
+/*-----------------------------------------------------------------*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap');
+
+body {
+  color: #1a1a1a;
+  background-color: #5352d4;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+li {
+  padding: 0 0 10px;
+}
+
+/*-----------------------------------------------------------------*/
+/*                      PRELOADER                                  */
+/*-----------------------------------------------------------------*/
+.preloader-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0C0C0C;
+  z-index: 6;
+  overflow: hidden;
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 60px;
+  margin: -30px 0 0 -40px;
+}
+
+.preloader .lines {
+  width: 80px;
+  height: 40px;
+  position: absolute;
+}
+
+.preloader .lines .line {
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  clip: rect(0,0,20px,0);
+}
+
+.preloader .lines .line.line-1 {
+  top: 0;
+  animation: slide 2s ease 0.1s infinite;
+}
+
+.preloader .lines .line.line-2 {
+  top: 15px;
+  animation: slide 2s ease .25s infinite;
+}
+
+.preloader .lines .line.line-3 {
+  top: 30px;
+  animation: slide 2s ease .5s infinite;
+}
+
+.preloader .loading-text {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  line-height: 10px;
+  height: 10px;
+  text-transform: uppercase;
+}
+
+@keyframes slide {
+  0% {
+      clip: rect(0,0,20px,0);
+  }
+
+  30% {
+      clip: rect(0,80px,20px,0);
+  }
+
+  50% {
+      clip: rect(0,80px,20px,0);
+  }
+
+  80% {
+      clip: rect(0,80px,20px,80px);
+  }
+
+  100% {
+      clip: rect(0,80px,20px,80px);
+  }
+}
+
+@keyframes fade {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+/*-----------------------------------------------------------------*/
+/*                      LAYOUT                                     */
+/*-----------------------------------------------------------------*/
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+      width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .welcome {
+      padding: 60px !important;
+  }
+
+  .welcome .quote {
+      width: initial;
+  }
+
+  .facts .fact-item {
+      margin-bottom: 20px;
+  }
+
+  .resume .resume-item {
+      margin-top: 30px !important;
+  }
+
+  .blog .item .text {
+      margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-content section {
+      padding: 60px 30px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .header .name {
+      margin: 15px 0;
+  }
+
+  .header .main-nav ul li {
+      padding-bottom: 10px;
+  }
+
+  .header .social-icons {
+      margin: 0 0 15px;
+  }
+
+  .header .copyright {
+      bottom: -18px;
+      position: relative;
+  }
+}
